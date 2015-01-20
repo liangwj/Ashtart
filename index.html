@@ -17,15 +17,27 @@
                 });
             });
         });
+
+        var aa;
+		$("#test").mouseover(function () {
+			var str=$(this);
+			aa=setInterval(function(){
+				$(str).animate({ opacity: 0.2 });
+				$(str).animate({ opacity: 1 });
+			},800);
+		}).mouseout(function () {
+			clearInterval(aa);
+		});
     </script>
 </head>
 <body>
 <div id="masonry" class="container-fluid" >
-    <div class="box"><img src="./images/demo1.png"></div>
+
+    <div class="box" onclick="alert('demo1');" onmouseover="use();"><img src="./images/demo1.png"></div>
     <div class="box"><img src="./images/demo2.png"></div>
     <div class="box"><img src="./images/demo3.png"></div>
     <div class="box"><img src="./images/demo4.png"></div>
-    <div class="box"><img src="./images/demo1.png"></div>
+    <div class="box"><img id="test" src="./images/demo1.png"></div>
     <div class="box"><img src="./images/demo3.png"></div>
     <div class="box"><img src="./images/demo4.png"></div>
     <div class="box"><img src="./images/demo2.png"></div>
