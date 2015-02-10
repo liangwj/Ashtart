@@ -3,6 +3,7 @@ Linux 64位 Ubuntu
 方便以后运行项目，安装插件
 
 Beego
+
 |-- views -- JQuery + Html （前端展示） + 其他各种第三方插件
 
 |-- controller -- 中层接口（RestFul接口，可自动生成，增删改查，日后其他客户端也可以调用）
